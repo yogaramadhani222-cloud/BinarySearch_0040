@@ -117,4 +117,5 @@ int main ()
     BubbleSortArray();
     display ();
     BinarySearch();
+    return 0;
 }
