@@ -30,4 +30,40 @@ void input()
         cout << "data ke -" << (i+1)<< " = ";
         cin >> element[i];
     }
+
+}
+
+void BubbleSortArray()
+{
+    int pass = 1;
+    do 
+    {
+        for (int j = 0;j <= npanjang - 1 - pass;j++)
+        {
+            if (element [j] > element[j + 1])
+            {
+                int temp = element[j];
+                element [j] = element [j + 1];
+                element [j+1] = temp;
+            }
+        }
+        pass++;
+    } while (pass <= npanjang - 1);
+}
+
+void display()
+{
+    cout << "\n===============================================";
+    cout << "     elemen array setelah diurutkan (Asc)\n      ";
+    cout << "\n===============================================";
+
+    for (int j = 0;j < npanjang; j++)
+    {
+        cout <<element [j];
+        if (j < npanjang - 1)
+        {
+            cout << " ->";
+        }
+    }
+    cout << endl;
 }
